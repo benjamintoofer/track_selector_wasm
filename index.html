@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Track Selector</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui container">
+        <h1 class="ui header">Track Selector Demo</h1>
+        <div class="ui divider"></div>
+        <div class="ui grid">
+            <div class="row">
+                <div class="eight wide column">
+                    <div class="ui fluid input">
+                        <input id="manifest-field" type="text" placeholder="MPD Url">
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <button id="parse-button" class="ui button">Parse</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight wide column">
+                    <div id="manifest-dropdown" class="ui fluid selection dropdown">
+                        <input type="hidden" name="manifest">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Manifest</div>
+                        <div class="menu">
+                            <div class="item" data-value="http://dash.edgesuite.net/akamai/bbb_30fps/bbb_30fps.mpd">SegmentTemplate - 1</div>
+                            <div class="item" data-value="https://dash.akamaized.net/dash264/TestCases/5a/1/manifest.mpd">SegmentTemplate - MP</div>
+                            <div class="item" data-value="http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd">SegmentTemplate - 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="ui divider"></div>
+        <div id="content-types-container" class="ui grid" style="display: none">
+            <div class="row">
+                <div class="sixteen wide column">
+                    <h2 class="ui header">Content Types</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight wide column">
+                    <div id = "content-types-dropwdown" class="ui fluid selection dropdown">
+                        <input type="hidden" name="content-type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Content Type</div>
+                        <div class="menu">
+                        </div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <div class="ui fluid input">
+                        <input id="position-field" type="text" placeholder="Position In Seconds">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight wide column">
+                    <div id="bandwidth-dropwdown" class="ui fluid selection dropdown">
+                        <input type="hidden" name="content-type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Bandwidth</div>
+                        <div class="menu">
+                        </div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <button id= "media-url-button" class="ui button">Get Media URL</button>
+            </div>
+        </div>
+        <div id="error-container" class="ui grid" style="display: none">
+            <div class="row">
+                <div class="sixteen wide column">
+                    <h2 class="ui red header">Error Console</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/index.ts"></script>
+</body>
+
+</html>
