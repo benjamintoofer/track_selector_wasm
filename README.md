@@ -3,12 +3,21 @@
 To run the project, just run 'npm install' and then 'npm start' and go to `http://localhost:1234` in your browser to view the Demo
 
 ## Setup
-For this demo you will need to have `node.js` and `rust` installed.
+For this demo you will need to have `node.js`, `wasm-pack` and `rust` installed.
 
+### Rust and Cargo
 To install `rust` and `cargo`, run this command in your command line:
 ```
 curl https://sh.rustup.rs -sSf | sh
 ```
+
+### wasm-pack
+To install `wasm-pack`, run this command in your command line:
+```
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+```
+
+### Node.js and npm
 And to install `node.js` and `npm` you can install it from [here](https://nodejs.org/en/download/).
 
 ## Instructions
