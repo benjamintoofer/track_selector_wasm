@@ -180,12 +180,12 @@ pub mod Dash {
         }
         let representation_id = representation_id.unwrap();
         let media_str_template = extract_attribute("media", &segment_template).unwrap();
-        // let ben: &mut String;
-        let ben = media_str_template
+
+        let new_str = media_str_template
                     .replace("$RepresentationID$", representation_id)
                     .replace("$Bandwidth$", &bandwidth.to_string())
                     .replace("$Number$", &number.to_string());
-        return Some(ben);
+        return Some(new_str);
     }
 
     /*
